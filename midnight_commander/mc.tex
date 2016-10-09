@@ -1,0 +1,199 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false, 
+pdftitle={Cheatsheet}, 
+pdfauthor={John Smith}, 
+pdfsubject={Compilation of useful shortcuts}, 
+pdfkeywords={Random Software, Cheatsheet}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
+
+\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\put(10,200){ % Position on the page to put the title
+\begin{minipage}[t]{210mm} % The size and alignment of the title
+\section*{Midnight Commander Cheatsheet} % Title
+\end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+%	FIRST COLUMN SPECIFICATION
+%----------------------------------------------------------------------------------------
+
+\put(10,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+%----------------------------------------------------------------------------------------
+%	HEADING ONE
+%----------------------------------------------------------------------------------------
+
+\sectiontitle{Basic interface}
+
+Instead of function keys \texttt{Esc + number} can be used. \\
+
+\command{\texttt{F1}}{Help}
+\command{\texttt{F2}}{User menu}
+\command{\texttt{F3}}{View}
+\command{\texttt{F4}}{Edit}
+\command{\texttt{F5}}{Copy}
+\command{\texttt{F6}}{Rename/Move}
+\command{\texttt{F7}}{Mkdir}
+\command{\texttt{F8}}{Delete}
+\command{\texttt{F9}}{Pull down menu}
+\command{\texttt{F10}}{Quit}
+
+\sectiontitle{Moving around}
+
+\command{\texttt{Tab}}{Switch panels}
+\command{\texttt{A-g}}{Jump to top file}
+\command{\texttt{A-r}}{Jump to middle file}
+\command{\texttt{A-j}}{Jump to bottom file}
+\command{\texttt{C-PgUp}}{Open parent dir}
+\command{\texttt{C-PgDwn}}{Open current dir}
+\command{\texttt{A-y}}{Open previous dir in history}
+\command{\texttt{A-u}}{Open next dir in history}
+
+\sectiontitle{Access the shell}
+
+\command{\texttt{C-o}}{Toggle shell}
+\command{\texttt{C/A-Enter}}{Copy current file}
+\command{\texttt{C-Shift-Enter}}{Copy current path}
+
+\end{minipage}
+}
+
+\put(105,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text}
+
+
+\sectiontitle{Selections}
+
+\command{\texttt{Insert, C-t}}{Select files}
+\command{\texttt{+}}{Select pattern}
+\command{\texttt{\textbackslash}}{Deselect pattern}
+\command{\texttt{*}}{Reverse selection}
+
+\sectiontitle{Panels}
+
+\command{\texttt{A-,}}{Toggle layout}
+\command{\texttt{A-t}}{Cycle listing modes}
+\command{\texttt{A-i}}{Synchronize panels}
+\command{\texttt{C-u}}{Swap panels}
+\command{\texttt{A-o}}{Open dir in other panel}
+\command{\texttt{A-Shift-h}}{Show dir history}
+\command{\texttt{C-x i}}{Info}
+\command{\texttt{C-x q}}{Quick view}
+
+\sectiontitle{Search}
+
+\command{\texttt{C/A-s}}{Quick search}
+\command{\texttt{A-?}}{Search dialog}
+
+\sectiontitle{Commands}
+
+\command{\texttt{C-Space}}{Compute dir size}
+\command{\texttt{C-x c}}{\texttt{chmod} dialog}
+\command{\texttt{C-x o}}{\texttt{chown} dialog}
+\command{\texttt{C-x d}}{Compare directories}
+\command{\texttt{C-x C-d}}{Compare files}
+\command{\texttt{A-h}}{Command history}
+\command{\texttt{C-\textbackslash}}{Directory hotlist}
+
+\end{minipage} % End the column of text
+} % End the division of the page
+
+\put(200,180){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+
+
+\sectiontitle{Links and Symlinks}
+
+\command{\texttt{C-x l}}{Create link}
+\command{\texttt{C-x s}}{Create symlink}
+\command{\texttt{C-x v}}{Create relative symlink}
+\command{\texttt{C-x C-s}}{Edit symlink}
+
+%\command{\texttt{}}{}
+
+%----------------------------------------------------------------------------------------
+%	IMPORTANT FILES
+%----------------------------------------------------------------------------------------
+
+\sectiontitle{Links and information}
+
+\url{http://www.midnight-commander.org/}
+
+
+%----------------------------------------------------------------------------------------
+%	FOOTNOTE
+%----------------------------------------------------------------------------------------
+
+\vspace{\baselineskip}
+\linethickness{0.5mm} % Thickness of the footer line
+{\color{mygray}\line(1,0){30}} % Print the line with a custom color
+
+\footnotesize{
+Created by Peter Kotvan, 2016\\
+				
+Released under the MIT license.
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End the third column of text
+} % End the third division of the page
+\end{picture} % End the container for the entire page
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
